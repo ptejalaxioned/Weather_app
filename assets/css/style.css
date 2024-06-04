@@ -99,8 +99,7 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  width: 85%; 
   margin: 0 auto;
 }
 *,
@@ -112,51 +111,118 @@ li {
 }
 
 /*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
   main styling starts here
 =================================*/
+.weather{
+  padding: 50px 0px;
+background-color:#0a1f43;
+}
 
+.weather .wrapper{
+  width: 90%;
+  margin: auto;
+display: flex;
+flex-direction: column;
+gap: 43px;
+}
 
+.weather h1{
+  color:#f0f8ff ;
+  font-size: 100px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: capitalize;
+}
 
+.search{
+display: flex;
+justify-content: center;
+gap: 25px;
+}
 
+.serach-city{
+  width: 34%;
+  padding-left:5px ;
+  border: none;
+  border-bottom: 2px solid #f0f8ff;
+  background-color: transparent;
+  color: #f0f8ff;
+  font-size:47px;
+  outline: none;
+  caret-color:#f0f8ff; 
+}
 
+input::placeholder {
+  color: #f0f8ff;
+  font-weight: 500;
+}
 
+.search-button{
+  width: 12%;
+  padding: 20px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff1f41;
+  color: #f0f8ff;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 
+/* ******************** card****************** */
+.card-area{
+background-color: #0a1f43;
+}
+
+.temp-list{
+  margin: 103px 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.temp-list li{
+  width: 18.5%;
+display: flex;
+flex-direction: column;
+background-color: #f0f8ff;
+border-radius: 20px;
+padding: 40px 24px;
+}
+
+.city-name{
+  font-size: 35px;
+  font-weight: 500;
+  color: #0a1f43d3;
+}
+
+.temprature{
+  font-size: 100px;
+  font-weight: 800;
+  margin: 20px 0px;
+  color: #081833;
+}
+
+.icon{
+  font-size: 120px;
+  display: flex;
+  text-indent: -9999px;
+}
+
+.discription{
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #0a1f43a8;
+}
+
+.icon::before{
+  content: "\f0c2";
+  font-family: "FontAwesome";
+  display: flex;
+  text-indent: 0px;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
