@@ -8,13 +8,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,22 +98,35 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type="button"],
+input[type="submit"],
 button {
   cursor: pointer;
 }
@@ -50,7 +137,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,8 +155,12 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
@@ -78,8 +171,9 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
-
+.cf:after {
+  clear: both;
+}
 
 /*for all*/
 body {
@@ -87,9 +181,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -99,7 +193,7 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  width: 85%; 
+  width: 85%;
   margin: 0 auto;
 }
 *,
@@ -113,43 +207,42 @@ li {
 /*=================================
   main styling starts here
 =================================*/
-.weather{
-  padding: 50px 0px;
-background-color:#0a1f43;
-}
-
-.weather .wrapper{
+.wrapper {
   width: 90%;
   margin: auto;
-display: flex;
-flex-direction: column;
-gap: 43px;
+  gap: 43px;
 }
 
-.weather h1{
-  color:#f0f8ff ;
+.weather h1 {
+  color: #f0f8ff;
   font-size: 100px;
   font-weight: 900;
   text-align: center;
   text-transform: capitalize;
 }
 
-.search{
-display: flex;
-justify-content: center;
-gap: 25px;
+.search-area {
+  position: relative;
+  z-index: 3;
+  background-color: #0a1f43;
 }
 
-.serach-city{
-  width: 34%;
-  padding-left:5px ;
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.serach-city {
+  width: 25%;
+  padding-left: 5px;
   border: none;
   border-bottom: 2px solid #f0f8ff;
   background-color: transparent;
   color: #f0f8ff;
-  font-size:47px;
+  font-size: 47px;
+  caret-color: #f0f8ff;
   outline: none;
-  caret-color:#f0f8ff; 
 }
 
 input::placeholder {
@@ -157,9 +250,8 @@ input::placeholder {
   font-weight: 500;
 }
 
-.search-button{
-  width: 12%;
-  padding: 20px 10px;
+.search-button {
+  padding: 20px 15px;
   border: none;
   border-radius: 8px;
   background-color: #ff1f41;
@@ -169,60 +261,97 @@ input::placeholder {
   letter-spacing: 2px;
 }
 
-/* ******************** card****************** */
-.card-area{
-background-color: #0a1f43;
+.search-area .wrapper {
+  width: 100%;
+  padding: 90px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
-.temp-list{
-  margin: 103px 0px;
+/* ******************** card****************** */
+
+.card-area {
+  padding: 23px 0px 110px;
+  background-color: #0a1f43;
+  transform: translateY(-1000px);
+  transition: transform 2s;
+}
+
+.card-area-onclick {
+  transform: translateY(0px);
+  transition: transform 2s;
+}
+
+.temp-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  transform: translateX(-2000px);
+  transition: transform 2s;
 }
 
-.temp-list li{
+.temp-list-onclick {
+  transform: translateX(0px);
+  transition: transform 2s;
+}
+
+.temp-list li {
   width: 18.5%;
-display: flex;
-flex-direction: column;
-background-color: #f0f8ff;
-border-radius: 20px;
-padding: 40px 24px;
+  padding: 40px 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  box-shadow: 10px 11px #f0f8ff8a;
 }
 
-.city-name{
+.city-name {
+  color: #0a1f43d3;
   font-size: 35px;
   font-weight: 500;
-  color: #0a1f43d3;
 }
 
-.temprature{
+.temprature-span {
+  color: #081833;
   font-size: 100px;
   font-weight: 800;
-  margin: 20px 0px;
-  color: #081833;
 }
 
-.icon{
-  font-size: 120px;
+.icon {
   display: flex;
+  font-size: 120px;
   text-indent: -9999px;
 }
 
-.discription{
+.discription {
+  color: #0a1f43a8;
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #0a1f43a8;
 }
 
-.icon::before{
-  content: "\f0c2";
-  font-family: "FontAwesome";
+.icon::before {
+  content: "\f186";
+  margin-bottom: 15px;
   display: flex;
+  font-family: "FontAwesome";
+  font-size: 135px;
+  font-weight: 100;
   text-indent: 0px;
 }
 
+.inside-temprature {
+  padding-bottom: 30px;
+  color: #081833;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.temprature {
+  margin: 12px 0px;
+  display: flex;
+  align-items: center;
+}
 /*=================================
   main styling ends here
 =================================*/
