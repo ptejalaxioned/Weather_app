@@ -240,7 +240,7 @@ li {
   border-bottom: 2px solid #f0f8ff;
   background-color: transparent;
   color: #f0f8ff;
-  font-size: 47px;
+  font-size: 39px;
   caret-color: #f0f8ff;
   outline: none;
 }
@@ -251,7 +251,7 @@ input::placeholder {
 }
 
 .search-button {
-  padding: 20px 15px;
+  padding: 15px 15px;
   border: none;
   border-radius: 8px;
   background-color: #ff1f41;
@@ -274,12 +274,12 @@ input::placeholder {
   padding: 23px 0px 110px;
   background-color: #0a1f43;
   transform: translateY(-1000px);
-  transition: transform 2s;
+  transition: transform .5s;
 }
 
 .card-area-onclick {
   transform: translateY(0px);
-  transition: transform 2s;
+  transition: transform .5s;
 }
 
 .temp-list {
@@ -287,12 +287,12 @@ input::placeholder {
   justify-content: space-between;
   flex-wrap: wrap;
   transform: translateX(-2000px);
-  transition: transform 2s;
+  transition: transform 1s;
 }
 
 .temp-list-onclick {
   transform: translateX(0px);
-  transition: transform 2s;
+  transition: transform 1s;
 }
 
 .temp-list li {
@@ -351,6 +351,24 @@ input::placeholder {
   margin: 12px 0px;
   display: flex;
   align-items: center;
+}
+.error-div{
+font-size: 80px;
+font-weight: bold;
+text-transform: capitalize;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 35vh;
+margin: auto;
+text-align: center;
+color: #bf3235;
+}
+
+.oops{
+  font-size: 80px;
+  padding-bottom: 20px;
 }
 /*=================================
   main styling ends here
