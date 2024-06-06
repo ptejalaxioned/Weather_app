@@ -2,12 +2,12 @@ let button = document.querySelector(".search-button");
 let card_area = document.querySelector(".card-area");
 let card_area_wrapper = document.querySelectorAll(".wrapper")[1];
 let serach_city = document.querySelector(".serach-city");
-let ul = document.querySelector("ul");
+
 
 let childCount = card_area_wrapper.children.length;
 button.addEventListener("click", () => {
   card_area.classList.toggle("card-area-onclick");
-  card_area.style.height = "59.5vh";
+
 
   let city =serach_city.value
   let apiUrl="https://api.openweathermap.org/data/2.5/forecast?units=metric&lang=en&q="
@@ -18,12 +18,16 @@ button.addEventListener("click", () => {
 
 if(serach_city.value!=="")
     {
-   
+
+        let  heading= document.createElement("h2");
+        heading.innerText="PUNE"
+        let ul = document.createElement("ul");
+        ul.classList.toggle("temp-list")
+        card_area_wrapper.append(heading,ul)
+       console.log(card_area_wrapper)
+
         setTimeout(function() {
-            // let  heading= document.querySelector("h2");
-            // div_up.innerText="PUNE"
-            // card_area_wrapper.appendChild(heading)
-            ul.classList.toggle("temp-list-onclick");
+            card_area_wrapper.classList.toggle("card-wrapper-onclick");
         }, 500);
 
 
