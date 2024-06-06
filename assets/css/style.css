@@ -283,7 +283,7 @@ input::placeholder {
   transition: transform 0.5s;
 }
 
-.card-area .wrapper {
+.card-area-wrapper{
   transform: translateX(-2000px);
   transition: transform 1s;
 }
